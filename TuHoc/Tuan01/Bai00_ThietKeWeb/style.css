@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #f3f3f3;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 cột theo hình mẫu */
+  gap: 10px;
+}
+
+.product-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  min-height: 480px;
+}
+
+.label-top {
+  font-size: 11px;
+  color: #666;
+  min-height: 15px;
+  margin-bottom: 10px;
+}
+
+.product-img {
+  text-align: center;
+  margin-bottom: 15px;
+}
+.product-img img {
+  max-width: 100%;
+  height: 160px;
+  object-fit: contain;
+}
+
+.product-name {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  height: 40px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.tech-specs {
+  font-size: 11px;
+  color: #777;
+  background: #f1f1f1;
+  padding: 2px 6px;
+  border-radius: 4px;
+  width: fit-content;
+  margin-bottom: 10px;
+}
+
+.storage-options {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+.opt {
+  font-size: 10px;
+  border: 1px solid #ddd;
+  padding: 2px 4px;
+  border-radius: 3px;
+  color: #666;
+}
+.opt.active {
+  border-color: #288ad6;
+  color: #288ad6;
+}
+
+.price-box {
+  margin-bottom: 10px;
+}
+.promo-label {
+  display: block;
+  font-size: 11px;
+  color: #d0021c;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+.main-price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #d0021c;
+}
+.price-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.old-price {
+  font-size: 12px;
+  color: #999;
+  text-decoration: line-through;
+}
+.percent {
+  font-size: 12px;
+  color: #d0021c;
+}
+
+.gift-text {
+  font-size: 12px;
+  color: #333;
+  margin-top: 5px;
+}
+
+.card-footer {
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px solid #f1f1f1;
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+}
+.stars {
+  color: #fb6e2e;
+}
+.sold-count {
+  color: #777;
+}
+.compare {
+  color: #288ad6;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 850px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
