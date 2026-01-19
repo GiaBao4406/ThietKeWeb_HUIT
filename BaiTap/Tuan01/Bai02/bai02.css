@@ -1,0 +1,252 @@
+:root {
+  --bg: #030712;
+  --card-bg: rgba(17, 24, 39, 0.8);
+  --accent: #38bdf8;
+  --accent-glow: rgba(56, 189, 248, 0.4);
+  --text-main: #f3f4f6;
+  --text-dim: #9ca3af;
+  --glass: rgba(255, 255, 255, 0.03);
+}
+
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--bg);
+  color: var(--text-main);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background-image: radial-gradient(
+    circle at 2px 2px,
+    rgba(255, 255, 255, 0.05) 1px,
+    transparent 0
+  );
+  background-size: 40px 40px;
+}
+
+/* Bento Grid */
+.bento-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(180px, auto);
+  gap: 20px;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.bento-item {
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  padding: 30px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.bento-item:hover {
+  border-color: var(--accent);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Profile Card */
+.profile-card {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.avatar-wrapper {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 25px;
+}
+.avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  object-fit: cover;
+  border: 2px solid var(--accent);
+}
+.status-dot {
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+  width: 18px;
+  height: 18px;
+  background: #10b981;
+  border: 4px solid #111827;
+  border-radius: 50%;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+.role {
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.desc {
+  color: var(--text-dim);
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Social Pills */
+.social-pills {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.pill {
+  text-decoration: none;
+  color: var(--text-main);
+  background: var(--glass);
+  padding: 10px 18px;
+  border-radius: 14px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: 0.3s;
+}
+.pill:hover {
+  background: var(--accent);
+  color: var(--bg);
+  transform: scale(1.05);
+}
+
+/* Tech Card */
+.tech-card {
+  grid-column: span 2;
+}
+.skill-icons {
+  margin-top: 20px;
+}
+.skill-icons img {
+  width: 100%;
+  transition: 0.3s;
+}
+
+/* Learning Card */
+.learning-card {
+  grid-column: span 2;
+}
+.learning-list {
+  list-style: none;
+  margin-top: 15px;
+}
+.learning-list li {
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  color: var(--text-dim);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.learning-list i {
+  color: var(--accent);
+  font-size: 0.8rem;
+}
+
+/* Projects Card */
+.projects-card {
+  grid-column: span 4;
+}
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.view-all {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+.mini-project {
+  background: var(--glass);
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
+  border: 1px solid transparent;
+}
+.mini-project:hover {
+  background: rgba(56, 189, 248, 0.05);
+  border-color: var(--accent);
+}
+.proj-info strong {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+.proj-info span {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  font-weight: 600;
+}
+.proj-link {
+  color: var(--text-dim);
+  transition: 0.3s;
+}
+.proj-link:hover {
+  color: var(--accent);
+}
+
+/* Wave Animation */
+.wave {
+  display: inline-block;
+  animation: wave-animation 2.5s infinite;
+  transform-origin: 70% 70%;
+}
+@keyframes wave-animation {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  60% {
+    transform: rotate(10deg);
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .bento-container {
+    grid-template-columns: 1fr;
+  }
+  .bento-item,
+  .projects-card,
+  .profile-card,
+  .tech-card,
+  .learning-card {
+    grid-column: span 1 !important;
+  }
+  .project-list {
+    grid-template-columns: 1fr;
+  }
+}

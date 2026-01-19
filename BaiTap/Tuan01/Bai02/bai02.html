@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gibor Software Engineer</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="bai02.css" />
+  </head>
+  <body>
+    <div class="bento-container">
+      <div class="bento-item profile-card">
+        <div class="avatar-wrapper">
+          <img src="gbao.jpg" alt="Tran Gia Bao" class="avatar" />
+          <div class="status-dot"></div>
+        </div>
+        <h1>TRẦN GIA BẢO <span class="wave">👋</span></h1>
+        <p class="role">
+          Sinh năm 2 @
+          <strong>Trường Đại học Công Thương TP.Hồ Chí Minh</strong>
+        </p>
+        <p class="desc">
+          Theo đuổi con đường Web, Mobile và AI với mục tiêu trở thành một
+          Software Engineer chuyên nghiệp.
+        </p>
+
+        <div class="social-pills">
+          <a href="mailto:g.baotran06@gmail.com" class="pill" target="_blank"
+            ><i class="fa-solid fa-envelope"></i> Email</a
+          >
+          <a
+            href="https://www.facebook.com/gibor06"
+            class="pill"
+            target="_blank"
+            ><i class="fa-brands fa-facebook"></i> Facebook</a
+          >
+          <a href="https://github.com/GiaBao4406" class="pill" target="_blank"
+            ><i class="fa-brands fa-github"></i> GitHub</a
+          >
+        </div>
+      </div>
+
+      <div class="bento-item tech-card">
+        <h3><i class="fa-solid fa-layer-group"></i> My Tech Stack</h3>
+        <div class="skill-icons">
+          <img
+            src="https://skillicons.dev/icons?i=c,cs,java,py,html,css,js,react,git,github"
+            alt="Skills"
+          />
+        </div>
+      </div>
+
+      <div class="bento-item learning-card">
+        <h3><i class="fa-solid fa-book-open"></i> Current Focus</h3>
+        <ul class="learning-list">
+          <li>
+            <i class="fa-solid fa-code"></i> Learning
+            <strong>React & Node.js</strong>
+          </li>
+          <li>
+            <i class="fa-solid fa-brain"></i> Researching
+            <strong>AI Fundamentals</strong>
+          </li>
+          <li>
+            <i class="fa-solid fa-microchip"></i>
+            <strong>Data Structures</strong>
+          </li>
+        </ul>
+      </div>
+
+      <div class="bento-item projects-card">
+        <div class="header-flex">
+          <h3><i class="fa-solid fa-diagram-project"></i> Featured Projects</h3>
+          <a
+            href="https://github.com/GiaBao4406"
+            target="_blank"
+            class="view-all"
+            >View all →</a
+          >
+        </div>
+        <div class="project-list">
+          <div class="mini-project">
+            <div class="proj-info">
+              <strong>Year 1 Summary Website</strong>
+              <span>HTML • CSS • JS</span>
+            </div>
+            <a
+              href="https://giabao4406.github.io/WebTongKetNam1/"
+              target="_blank"
+              class="proj-link"
+              ><i class="fa-solid fa-arrow-up-right-from-square"></i
+            ></a>
+          </div>
+          <div class="mini-project">
+            <div class="proj-info">
+              <strong>OOP with C# Systems</strong>
+              <span>C# • Programming Logic</span>
+            </div>
+            <a
+              href="https://github.com/GiaBao4406/OOP-with-C-"
+              target="_blank"
+              class="proj-link"
+              ><i class="fa-solid fa-arrow-up-right-from-square"></i
+            ></a>
+          </div>
+          <div class="mini-project">
+            <div class="proj-info">
+              <strong>QuanLyBaiXe-DACK</strong>
+              <span>C++ • Programming Logic</span>
+            </div>
+            <a
+              href="https://github.com/GiaBao4406/QuanLyBaiXe-DACK"
+              class="proj-link"
+              ><i class="fa-solid fa-arrow-up-right-from-square"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Khởi tạo ScrollReveal
+      const sr = ScrollReveal({
+        origin: "top",
+        distance: "60px",
+        duration: 1500,
+        delay: 200,
+        reset: false,
+      });
+
+      sr.reveal(".profile-card");
+      sr.reveal(".tech-card", { delay: 400 });
+      sr.reveal(".learning-card", { delay: 600 });
+      sr.reveal(".projects-card", { delay: 800 });
+    </script>
+  </body>
+</html>
