@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.5;
+        color: #333;
+        margin: 20px;
+      }
+      .product-container {
+        display: flex;
+        gap: 40px;
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      /* Cột trái */
+      .left-col {
+        flex: 1;
+      }
+      .product-title {
+        color: #0056b3;
+        font-size: 24px;
+        border-bottom: 2px solid #ffd700;
+        padding-bottom: 5px;
+        margin-bottom: 20px;
+      }
+      .product-img {
+        width: 100%;
+        max-width: 400px;
+        display: block;
+        margin-bottom: 20px;
+      }
+
+      .promo-box {
+        border: 1px solid #ff4d4d;
+        border-radius: 5px;
+        overflow: hidden;
+        margin-bottom: 20px;
+      }
+      .promo-header {
+        background: linear-gradient(to right, #ff4d4d, #ff8c00);
+        color: white;
+        padding: 10px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+      }
+      .promo-content {
+        padding: 15px;
+        font-size: 14px;
+        list-style: none;
+        margin: 0;
+      }
+      .promo-content li::before {
+        content: "• ";
+        color: red;
+        font-weight: bold;
+      }
+
+      .status-stock {
+        color: #28a745;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      .phone-contact {
+        color: #d9534f;
+        font-weight: bold;
+        font-size: 18px;
+        text-decoration: none;
+      }
+
+      /* Cột phải */
+      .right-col {
+        flex: 1;
+      }
+      .section-header {
+        background: #f8f9fa;
+        padding: 10px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-top: 20px;
+        border-left: 4px solid #ddd;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+      }
+      th,
+      td {
+        border: 1px solid #dee2e6;
+        padding: 8px;
+        text-align: left;
+        font-size: 14px;
+      }
+      th {
+        background-color: #f1f1f1;
+        text-align: center;
+      }
+
+      .spec-table tr td:first-child {
+        width: 40%;
+        color: #555;
+      }
+      .spec-table tr td:last-child {
+        font-weight: bold;
+      }
+
+      /* Khối mô tả dưới */
+      .description-box {
+        background: #f1f1f1;
+        padding: 20px;
+        margin-top: 30px;
+        border-left: 5px solid #0056b3;
+      }
+      .description-box h3 {
+        margin-top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="product-container">
+      <div class="left-col">
+        <h1 class="product-title">MÁY LẠNH MDV 1.5 HP VSIC-12CFX</h1>
+        <img src="maylanh.jpg" alt="Máy lạnh MDV" class="product-img" />
+
+        <div class="promo-box">
+          <div class="promo-header">🎁 Quà tặng trị giá 7.000.000đ</div>
+          <ul class="promo-content">
+            <li>Đổi Trả Trong 35 Ngày Nếu Lỗi Kỹ Thuật</li>
+            <li>Tặng Phiếu Mua Hàng 7.000.000đ Mua Kèm Lọc Nước...</li>
+            <li>Tặng Combo Dịch Vụ & Phiếu Mua Hàng 700.000đ</li>
+            <li>Giảm 500.000đ Khi Thanh Toán Bằng Thẻ Tín Dụng</li>
+          </ul>
+        </div>
+
+        <div class="status-stock">
+          CÒN HÀNG
+          <span style="font-weight: normal; color: #0056b3"
+            >( Xem siêu thị còn hàng )</span
+          >
+        </div>
+        <p>
+          📞 Gọi
+          <a href="tel:02838563388" class="phone-contact">028-3856 3388</a> để
+          được tư vấn miễn phí
+        </p>
+
+        <div style="font-size: 13px; color: #666">
+          <p>• Xem thêm chính sách bảo hành và đổi trả</p>
+          <p>• Miễn phí vận chuyển toàn quốc</p>
+        </div>
+
+        <div class="description-box">
+          <h3>Làm lạnh nhanh, cảm biến hướng gió</h3>
+          <p>
+            Chức năng làm lạnh nhanh chỉ với một nút nhấn bạn có thể tận hưởng
+            cảm giác mát lạnh nhanh chóng. Máy lạnh sẽ hoạt động với công suất
+            cao nhất...
+          </p>
+        </div>
+      </div>
+
+      <div class="right-col">
+        <div style="color: #ff8c00; font-weight: bold">TÍNH NĂNG NỔI BẬT</div>
+        <table>
+          <tr>
+            <th>Công suất Làm lạnh (BTU)</th>
+            <th>Thể tích phòng sử dụng</th>
+            <th>Loại gas</th>
+            <th>Sản xuất tại</th>
+          </tr>
+          <tr>
+            <td style="text-align: center">12.000 BTU</td>
+            <td style="text-align: center">Dưới 60 m3</td>
+            <td style="text-align: center">R-32</td>
+            <td style="text-align: center">Việt Nam</td>
+          </tr>
+        </table>
+
+        <div class="section-header">Thông tin chung</div>
+        <table class="spec-table">
+          <tr>
+            <td>Công suất Làm lạnh (BTU)</td>
+            <td>12.000 BTU</td>
+          </tr>
+          <tr>
+            <td>Công suất lạnh (HP)</td>
+            <td>1.5 Hp</td>
+          </tr>
+          <tr>
+            <td>Inverter-Tiết kiệm điện</td>
+            <td>Không</td>
+          </tr>
+        </table>
+
+        <div class="section-header">Tính năng sản phẩm</div>
+        <table class="spec-table">
+          <tr>
+            <td>Hướng không khí</td>
+            <td>Lên/Xuống: Có</td>
+          </tr>
+          <tr>
+            <td>Bộ lọc khử mùi</td>
+            <td>Màng lọc kháng khuẩn</td>
+          </tr>
+          <tr>
+            <td>Làm lạnh nhanh</td>
+            <td>Có</td>
+          </tr>
+        </table>
+
+        <div class="section-header">Remote điều khiển</div>
+        <table class="spec-table">
+          <tr>
+            <td>Bật/tắt màn hình hiển thị</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Chế độ quạt</td>
+            <td>Tự động hoặc chỉnh tay</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
